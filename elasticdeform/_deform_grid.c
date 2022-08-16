@@ -34,7 +34,7 @@ NI_ObjectToOutputArray(PyObject *object, PyArrayObject **array)
     #ifdef HAVE_WRITEBACKIFCOPY
         int flags = NPY_ARRAY_BEHAVED_NS | NPY_ARRAY_WRITEBACKIFCOPY;
     #else
-        int flags = NPY_ARRAY_BEHAVED_NS | NPY_ARRAY_UPDATEIFCOPY;
+        int flags = NPY_ARRAY_BEHAVED_NS | NPY_ARRAY_WRITEBACKIFCOPY;
     #endif
     /*
      * This would also be caught by the PyArray_CheckFromAny call, but
